@@ -15,7 +15,13 @@ let getWeightedRandom = _.curry(weightedRandom.get)(getRandomIntInclusive)("weig
 describe('get', function() {
     it('returns sole item from one element list', function() {
         let soleItem = {value: 1, weight: 2};
-        let result = getWeightedRandom([soleItem])
+        let result = weightedRandom.get(getRandomIntInclusive, 'weight', [soleItem])
+        expect(result).to.equal(soleItem);
+    });
+
+    it('uses a default random number provider if one is not provided in argument list', function() {
+        let soleItem = {value: 1, weight: 2};
+        let result = weightedRandom.get('weight', [soleItem])
         expect(result).to.equal(soleItem);
     });
 
@@ -30,6 +36,23 @@ describe('get', function() {
             .map((v,i) => {return {value: i, weight: 0};});
         let f = function() {getWeightedRandom(items);}
         expect(f).to.throw('total weights must be greater than 0')
+    });
+
+    it('returns sole item in list', function() {
+        let geoData = [
+            {
+                name: "place#0",
+                population: 1,
+                coord: {
+                    lat: 1,
+                    lon: 2
+                }
+            }
+        ];
+
+        let result = weightedRandom.get(getRandomIntInclusive, "population", geoData);
+        expect(result).to.eql(geoData[0]);
+
     });
 
     it('returns roughly even distribution of equally weighted elements', function() {

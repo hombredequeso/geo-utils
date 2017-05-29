@@ -3,27 +3,10 @@ const weightedRandom = require('./weighted-random')
 
 let m = function(){};
 
-let getRandomIntInclusive = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-
-m.prototype.get = function(geoData) {
-    if (geoData.length < 1) {
-        throw "No data in geoData array";
-    }
-
-    return weightedRandom.get(getRandomIntInclusive, "population", geoData)
-};
-
-
-
 let addCoords = (a,b) => {return {lat: a.lat + b.lat, lon: a.lon + b.lon};};
 
 // https://en.wikipedia.org/wiki/Decimal_degrees
-let convertToLatLonDiff = function(distanceKm, angleRadians, atLat) {
+m.prototype.convertToLatLonDiff = function(distanceKm, angleRadians, atLat) {
     var atLat = atLat || 0;
     let kmPerDegreeAtEquator = 111.32;           // 110.25;
     let latChange = (distanceKm * Math.sin(angleRadians))/kmPerDegreeAtEquator;
@@ -44,12 +27,13 @@ let convertToLatLonDiff = function(distanceKm, angleRadians, atLat) {
 **/
 m.prototype.randomizedCoord = function(
     getRandom, nearCoord, withinDistanceKm, centreWeighting) {
+
     let centreWeighting2 = centreWeighting || 1;
     let distKm = withinDistanceKm || 0;
     let randomDistKm = weightedRandom.getScaledRandom(
         getRandom, 0.0, distKm, centreWeighting2);
     let randomAngleInRadians = getRandom() * 2 * Math.PI;
-    let coordOffset = convertToLatLonDiff(
+    let coordOffset = this.convertToLatLonDiff(
         randomDistKm, randomAngleInRadians, nearCoord.lat);
     return addCoords(nearCoord, coordOffset);
 };

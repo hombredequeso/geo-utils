@@ -1,4 +1,5 @@
 const randomGeoCoord = require('../random-geo-coord')
+const weightedRandom = require('../weighted-random')
 const commandLineArgs = require('command-line-args');
 const _ = require('lodash');
 const fs = require('fs');
@@ -17,7 +18,7 @@ const locations = JSON.parse(fs.readFileSync(options.locations, 'utf8'));
 process.stdout.write('[\n')
 _(Array(coordCount)).forEach((v,i) => {
 
-    let randomCoord = randomGeoCoord.randomizedCoord(Math.random, randomGeoCoord.get(locations).location, 20, 1.5);
+    let randomCoord = randomGeoCoord.randomizedCoord(Math.random, weightedRandom.get('population', locations).location, 30, 1.5);
     process.stdout.write(JSON.stringify(randomCoord));
     process.stdout.write(i < coordCount - 1? ',\n': '');
 });
