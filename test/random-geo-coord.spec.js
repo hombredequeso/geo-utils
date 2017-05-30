@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const chai = require('chai');
 const request = require('request-promise');
-const randomGeoCoord = require('../src/random-geo-coord')
+const randomGeoCoord = require('../lib/random-geo-coord')
 
 let expect = chai.expect;
 

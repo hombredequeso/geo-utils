@@ -1,7 +1,7 @@
 const chai = require('chai');
 const sampleBingLocationResponse = require("./bing-sample-get-location-response.json");
 const expect = chai.expect;
-const bingGeo = require('../src/bing-geo');
+const bingGeo = require('../lib/bing-geo');
 
 describe('bing-geo', function() {
     describe('location', function() {

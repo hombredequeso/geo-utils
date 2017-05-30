@@ -1,5 +1,5 @@
-const randomGeoCoord = require('../random-geo-coord')
-const weightedRandom = require('../weighted-random')
+const randomGeoCoord = require('../lib/random-geo-coord')
+const weightedRandom = require('../lib/weighted-random')
 const commandLineArgs = require('command-line-args');
 const _ = require('lodash');
 const fs = require('fs');

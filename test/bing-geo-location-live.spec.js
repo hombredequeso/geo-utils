@@ -1,7 +1,7 @@
 const chai = require('chai');
 const request = require('request-promise');
-const bingGeo = require('../src/bing-geo');
-const urlUtil = require('../src/url-util');
+const bingGeo = require('../lib/bing-geo');
+const urlUtil = require('../lib/url-util');
 
 const expect = chai.expect;
 

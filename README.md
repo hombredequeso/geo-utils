@@ -47,6 +47,19 @@ set BING_API_KEY=mysecretkey
 node get-geo-locations.js ..\data\aust-cities.json
 ```
 
+### Using lib functions
+
+Currently there is no library compilation or single point file loader. To use the lib functionality in another node program:
+
+```
+npm install --save github:hombredequeso/geo-utils
+```
+
+Then, to access the functions require the approapriate file explicitly in the js file. For example:
+```
+const bingGeo = require("geo-utils/lib/bing-geo");
+```
+
 ## Running the tests
 
 ```
@@ -65,6 +78,8 @@ To run the integration tests, which hit the bing maps api, ensure mocha is insta
 set BING_API_KEY=mysecretkey
 mocha --grep "IntegrationTest"
 ```
+
+The integration tests will run whenever the BING_API_KEY is set.
 
 ## Authors
 

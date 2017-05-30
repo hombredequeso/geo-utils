@@ -1,6 +1,6 @@
 var chai = require('chai');
 var expect = chai.expect;
-const urlUtil = require('../src/url-util')
+const urlUtil = require('../lib/url-util')
 
 describe('url-util', function() {
 

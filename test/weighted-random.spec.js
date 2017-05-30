@@ -1,4 +1,4 @@
-var weightedRandom = require('../src/weighted-random');
+var weightedRandom = require('../lib/weighted-random');
 var chai = require('chai');
 var _ = require('lodash');
 
