@@ -2,7 +2,7 @@
   "name": "geo-utils",
   "version": "1.0.0",
   "description": "Geographic related utilities, including random geo-coord generation.",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "mocha",
     "watch": "mocha --watch"
