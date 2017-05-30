@@ -1,6 +1,9 @@
 # Geo Utilities
 
 General collection of geographic related utilities.
+The core functions are:
+* generate random geo-coordinates within a certain distance from a weighted list of locations.
+* use the bing geo API to get the geo-coordinates of a list of places.
 
 ## Getting Started
 
