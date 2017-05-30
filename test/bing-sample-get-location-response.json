@@ -1,0 +1,98 @@
+{
+	"authenticationResultCode": "ValidCredentials",
+	"brandLogoUri": "http:\/\/dev.virtualearth.net\/Branding\/logo_powered_by.png",
+	"copyright": "Copyright © 2017 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+	"resourceSets": [{
+		"estimatedTotal": 3,
+		"resources": [{
+			"__type": "Location:http:\/\/schemas.microsoft.com\/search\/local\/ws\/rest\/v1",
+			"bbox": [-38.1610946655273,
+			144.251556396484,
+			-37.468334197998,
+			145.67041015625],
+			"name": "Melbourne, Australia",
+			"point": {
+				"type": "Point",
+				"coordinates": [-37.8175315856934,
+				144.967147827148]
+			},
+			"address": {
+				"adminDistrict": "VIC",
+				"countryRegion": "Australia",
+				"formattedAddress": "Melbourne, Australia",
+				"locality": "Melbourne"
+			},
+			"confidence": "High",
+			"entityType": "PopulatedPlace",
+			"geocodePoints": [{
+				"type": "Point",
+				"coordinates": [-37.8175315856934,
+				144.967147827148],
+				"calculationMethod": "Rooftop",
+				"usageTypes": ["Display"]
+			}],
+			"matchCodes": ["Ambiguous"]
+		},
+		{
+			"__type": "Location:http:\/\/schemas.microsoft.com\/search\/local\/ws\/rest\/v1",
+			"bbox": [-37.8432404025238,
+			144.914182624365,
+			-37.7852996365387,
+			145.011934318995],
+			"name": "Melbourne CBD, Australia",
+			"point": {
+				"type": "Point",
+				"coordinates": [-37.8142700195313,
+				144.96305847168]
+			},
+			"address": {
+				"adminDistrict": "VIC",
+				"countryRegion": "Australia",
+				"formattedAddress": "Melbourne CBD, Australia",
+				"locality": "Melbourne CBD"
+			},
+			"confidence": "Low",
+			"entityType": "PopulatedPlace",
+			"geocodePoints": [{
+				"type": "Point",
+				"coordinates": [-37.8142700195313,
+				144.96305847168],
+				"calculationMethod": "Rooftop",
+				"usageTypes": ["Display"]
+			}],
+			"matchCodes": ["Ambiguous"]
+		},
+		{
+			"__type": "Location:http:\/\/schemas.microsoft.com\/search\/local\/ws\/rest\/v1",
+			"bbox": [-37.8425804598969,
+			144.914183060803,
+			-37.7846396939117,
+			145.011933882556],
+			"name": "City of Melbourne, Australia",
+			"point": {
+				"type": "Point",
+				"coordinates": [-37.8136100769043,
+				144.96305847168]
+			},
+			"address": {
+				"adminDistrict": "VIC",
+				"countryRegion": "Australia",
+				"formattedAddress": "City of Melbourne, Australia",
+				"locality": "City of Melbourne"
+			},
+			"confidence": "Low",
+			"entityType": "PopulatedPlace",
+			"geocodePoints": [{
+				"type": "Point",
+				"coordinates": [-37.8136100769043,
+				144.96305847168],
+				"calculationMethod": "Rooftop",
+				"usageTypes": ["Display"]
+			}],
+			"matchCodes": ["Ambiguous"]
+		}]
+	}],
+	"statusCode": 200,
+	"statusDescription": "OK",
+	"traceId": "5a351660ad444d07af9c7ec3ee1cbbca|BN20160335|7.7.0.0|"
+}
